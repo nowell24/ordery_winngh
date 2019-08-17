@@ -30,7 +30,6 @@ namespace OrderyAPI.Utils
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = DBConf.getConnection();
             cmd.CommandText = SQL;
-            
             StatementBinding stb = new StatementBinding(cmd);
             stb.bindStatement(al);
             cmd = stb.getPreparedCommand();
