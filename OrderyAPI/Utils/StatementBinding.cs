@@ -1,9 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using OrderyAPI.DTO;
 
 namespace OrderyAPI.Utils
 {
@@ -21,126 +17,126 @@ namespace OrderyAPI.Utils
             return cmd;
         }
 
-        public void bindStatement(ArrayList al)
+        public void bindStatement(DTOParams dto)
         {
-            switch (al.Count)
+            switch (dto.count)
             {
                 case 1:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
                     break;
                 case 2:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
                     break;
                 case 3:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
                     break;
                 case 4:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
                     break;
                 case 5:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
                     break;
                 case 6:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
                     break;
                 case 7:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
                     break;
                 case 8:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
-                    cmd.Parameters.AddWithValue("@params7", al[7]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
+                    cmd.Parameters.AddWithValue("@params7", dto.params7);
                     break;
                 case 9:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
-                    cmd.Parameters.AddWithValue("@params7", al[7]);
-                    cmd.Parameters.AddWithValue("@params8", al[8]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
+                    cmd.Parameters.AddWithValue("@params7", dto.params7);
+                    cmd.Parameters.AddWithValue("@params8", dto.params8);
                     break;
                 case 10:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
-                    cmd.Parameters.AddWithValue("@params7", al[7]);
-                    cmd.Parameters.AddWithValue("@params8", al[8]);
-                    cmd.Parameters.AddWithValue("@params9", al[9]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
+                    cmd.Parameters.AddWithValue("@params7", dto.params7);
+                    cmd.Parameters.AddWithValue("@params8", dto.params8);
+                    cmd.Parameters.AddWithValue("@params9", dto.params9);
                     break;
                 case 11:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
-                    cmd.Parameters.AddWithValue("@params7", al[7]);
-                    cmd.Parameters.AddWithValue("@params8", al[8]);
-                    cmd.Parameters.AddWithValue("@params9", al[9]);
-                    cmd.Parameters.AddWithValue("@params10", al[10]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
+                    cmd.Parameters.AddWithValue("@params7", dto.params7);
+                    cmd.Parameters.AddWithValue("@params8", dto.params8);
+                    cmd.Parameters.AddWithValue("@params9", dto.params9);
+                    cmd.Parameters.AddWithValue("@params10", dto.params10);
                     break;
                 case 12:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
-                    cmd.Parameters.AddWithValue("@params7", al[7]);
-                    cmd.Parameters.AddWithValue("@params8", al[8]);
-                    cmd.Parameters.AddWithValue("@params9", al[9]);
-                    cmd.Parameters.AddWithValue("@params10", al[10]);
-                    cmd.Parameters.AddWithValue("@params11", al[11]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
+                    cmd.Parameters.AddWithValue("@params7", dto.params7);
+                    cmd.Parameters.AddWithValue("@params8", dto.params8);
+                    cmd.Parameters.AddWithValue("@params9", dto.params9);
+                    cmd.Parameters.AddWithValue("@params10", dto.params10);
+                    cmd.Parameters.AddWithValue("@params11", dto.params11);
                     break;
                 case 13:
-                    cmd.Parameters.AddWithValue("@params0", al[0]);
-                    cmd.Parameters.AddWithValue("@params1", al[1]);
-                    cmd.Parameters.AddWithValue("@params2", al[2]);
-                    cmd.Parameters.AddWithValue("@params3", al[3]);
-                    cmd.Parameters.AddWithValue("@params4", al[4]);
-                    cmd.Parameters.AddWithValue("@params5", al[5]);
-                    cmd.Parameters.AddWithValue("@params6", al[6]);
-                    cmd.Parameters.AddWithValue("@params7", al[7]);
-                    cmd.Parameters.AddWithValue("@params8", al[8]);
-                    cmd.Parameters.AddWithValue("@params9", al[9]);
-                    cmd.Parameters.AddWithValue("@params10", al[10]);
-                    cmd.Parameters.AddWithValue("@params11", al[11]);
-                    cmd.Parameters.AddWithValue("@params12", al[12]);
+                    cmd.Parameters.AddWithValue("@params0", dto.params0);
+                    cmd.Parameters.AddWithValue("@params1", dto.params1);
+                    cmd.Parameters.AddWithValue("@params2", dto.params2);
+                    cmd.Parameters.AddWithValue("@params3", dto.params3);
+                    cmd.Parameters.AddWithValue("@params4", dto.params4);
+                    cmd.Parameters.AddWithValue("@params5", dto.params5);
+                    cmd.Parameters.AddWithValue("@params6", dto.params6);
+                    cmd.Parameters.AddWithValue("@params7", dto.params7);
+                    cmd.Parameters.AddWithValue("@params8", dto.params8);
+                    cmd.Parameters.AddWithValue("@params9", dto.params9);
+                    cmd.Parameters.AddWithValue("@params10", dto.params10);
+                    cmd.Parameters.AddWithValue("@params11", dto.params11);
+                    cmd.Parameters.AddWithValue("@params12", dto.params12);
                     break;
                 case 14: break;
                 case 15: break;

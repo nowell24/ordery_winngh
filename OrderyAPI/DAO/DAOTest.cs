@@ -1,8 +1,5 @@
 ﻿using OrderyAPI.Utils;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Collections;
 using OrderyAPI.DTO;
 
@@ -10,24 +7,21 @@ namespace OrderyAPI.DAO
 {
     public class DAOTest : DAOFactory
     {
-        public override void create(string SQL, ArrayList al)
+        public override void upsert(string SQL, DTOParams dto)
         {
-            throw new NotImplementedException();
+            upsertMethod(SQL, dto);
         }
 
-        public override void delete(string SQL, ArrayList al)
+        public override void delete(string SQL, DTOParams dto)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public override List<ArrayList> read(string SQL, ArrayList al)
+        public override List<ArrayList> read(string SQL, DTOParams dto)
         {
-            return readMethod(SQL, al); 
+            return readMethod(SQL, dto); 
         }
 
-        public override void update(string SQL, ArrayList al)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

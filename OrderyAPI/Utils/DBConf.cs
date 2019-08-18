@@ -1,8 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace OrderyAPI.Utils
 {
@@ -32,7 +29,7 @@ namespace OrderyAPI.Utils
         {
             try
             {
-                conn = new MySqlConnection("Server=166.62.30.116; Database=ordery_winngh; UserID=orderwinuser; Password=!Qazxsw233");
+                conn = new MySqlConnection("Server=166.62.30.116; Database=ordery_winngh; UserID=orderwinuser; Password=!Qazxsw233; Allow User Variables=true");
                 conn.Open();
             }
             catch (Exception e)

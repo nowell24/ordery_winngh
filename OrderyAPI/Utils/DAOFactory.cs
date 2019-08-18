@@ -1,16 +1,14 @@
-﻿using System;
+﻿using OrderyAPI.DTO;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace OrderyAPI.Utils
 {
     public abstract class DAOFactory : DBCRUD
     {
-        public abstract void create(string SQL, ArrayList al);
-        public abstract void delete(string SQL, ArrayList al);
-        public abstract List<ArrayList> read(string SQL, ArrayList al);
-        public abstract void update(string SQL, ArrayList al);
+        public abstract void upsert(string SQL, DTOParams dto);
+        public abstract void delete(string SQL, DTOParams dto);
+        public abstract List<ArrayList> read(string SQL, DTOParams dto);
+       
     }
 }
