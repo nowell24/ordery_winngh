@@ -39,5 +39,15 @@
         public string params28 { get; set; }
         public string params29 { get; set; }
         public string params30 { get; set; }
+        public string params31 { get; set; }
+        public string params32 { get; set; }
+        public string params33 { get; set; }
+        public string params34 { get; set; }
+        public string params35 { get; set; }
+        public string params36 { get; set; }
+        public string params37 { get; set; }
+        public string params38 { get; set; }
+        public string params39 { get; set; }
+        public string params40 { get; set; }
     }
 }
