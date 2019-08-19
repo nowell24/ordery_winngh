@@ -1,4 +1,5 @@
-﻿using OrderyAPI.DTO;
+﻿using Newtonsoft.Json;
+using OrderyAPI.DTO;
 using OrderyAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -15,20 +16,22 @@ namespace OrderyAPI.Controllers
 
         [HttpGet]
         [Route("api/ordery-service/test-info")]
+        
         public HttpResponseMessage info()
         {
             try
             {
                 
                 List<DTOTest> listDTO = model.test();
-                string response = "";
-                for (int x = 0; x < listDTO.Count; x++)
+                string response = JsonConvert.SerializeObject(listDTO); ;
+                /*for (int x = 0; x < listDTO.Count; x++)
                 {
                     response += "Username: " + listDTO[x].username;
                     response += "Password: " + listDTO[x].password;
                     response += "<br>";
-                }
-                return Request.CreateResponse(HttpStatusCode.OK, "Result:<br> " + response);
+                }*/
+
+                return Request.CreateResponse(HttpStatusCode.OK, "Result: " + response);
             }
             catch (Exception e)
             {
