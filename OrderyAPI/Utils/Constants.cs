@@ -30,6 +30,9 @@ namespace OrderyAPI.Utils
                                             + "municipality.province = province.id "
                                             + "AND "
                                             + "barangay.municipality = municipality.id ";
-
+        public static string GETREGIONS = "SELECT id, name FROM region ORDER BY id";
+        public static string GETPROVINCES = "SELECT id, name FROM province WHERE region=@params0 ORDER BY id";
+        public static string GETMUNICIPALITIES = "SELECT id, name FROM municipality WHERE province=@params0 ORDER BY id";
+        public static string GETBARANGAYS = "SELECT id, name FROM barangay WHERE municipality=@params0 ORDER BY id";
     }
 }
