@@ -23,7 +23,7 @@ namespace OrderyAPI.Controllers
             {
                 
                 List<DTOTest> listDTO = model.test();
-                string response = JsonConvert.SerializeObject(listDTO); ;
+                string response = JsonConvert.SerializeObject(listDTO);
                 /*for (int x = 0; x < listDTO.Count; x++)
                 {
                     response += "Username: " + listDTO[x].username;
