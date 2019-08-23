@@ -16,6 +16,26 @@ namespace OrderyAPI.Controllers
         [HttpGet]
         [Route("api/ordery-service/regions")]
         public HttpResponseMessage regions()
+        /*
+        Gets all regions
+
+        params:
+            None
+
+        return:
+            {
+                regions: [
+                    {
+                        id: 1,
+                        name: Region I
+                    },
+                    {
+                        id: 2,
+                        name: Region II
+                    },
+                ]
+            }
+        */
         {
             try
             {
@@ -33,6 +53,29 @@ namespace OrderyAPI.Controllers
         [HttpGet]
         [Route("api/ordery-service/provinces")]
         public HttpResponseMessage provinces([FromBody] DTOParams dtoParams)
+        /*
+        Gets all provinces by region id
+
+        params:
+            {
+                params0: (integer) region id,
+                count: 1
+            }
+
+        return:
+            {
+                regions: [
+                    {
+                        id: 1,
+                        name: Ilocos Norte
+                    },
+                    {
+                        id: 2,
+                        name: Ilocos Sur
+                    },
+                ]
+            }
+        */
         {
             try
             {
@@ -49,6 +92,29 @@ namespace OrderyAPI.Controllers
         [HttpGet]
         [Route("api/ordery-service/municipalities")]
         public HttpResponseMessage municipalities([FromBody] DTOParams dtoParams)
+        /*
+        Gets all municipalities by province id
+
+        params:
+            {
+                params0: (integer) province id,
+                count: 1
+            }
+
+        return:
+            {
+                regions: [
+                    {
+                        id: 1,
+                        name: Paco
+                    },
+                    {
+                        id: 2,
+                        name: Pandacan
+                    },
+                ]
+            }
+        */
         {
             try
             {
@@ -65,6 +131,29 @@ namespace OrderyAPI.Controllers
         [HttpGet]
         [Route("api/ordery-service/barangays")]
         public HttpResponseMessage barangays([FromBody] DTOParams dtoParams)
+        /*
+        Gets all barangays by municipality id
+
+        params:
+            {
+                params0: (integer) municipality id,
+                count: 1
+            }
+
+        return:
+            {
+                regions: [
+                    {
+                        id: 1,
+                        name: Poblacion I
+                    },
+                    {
+                        id: 2,
+                        name: Poblacion II
+                    },
+                ]
+            }
+        */
         {
             try
             {
