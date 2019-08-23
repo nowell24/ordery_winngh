@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -268,6 +269,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\AddressSpecsModel.cs" />
+    <Compile Include="Utils\Cipher.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\TestModel.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
