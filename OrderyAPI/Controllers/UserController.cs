@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace OrderyAPI.Controllers
 {
-    public class RegistrationController : ApiController
+    public class UserController : ApiController
     {
         [HttpGet]
         [Route("api/ordery-service/user")]
