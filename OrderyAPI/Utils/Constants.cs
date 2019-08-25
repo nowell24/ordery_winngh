@@ -46,7 +46,7 @@ namespace OrderyAPI.Utils
                                         + "FROM "
                                         + "@params0, "
                                         + "WHERE "
-                                        + "id = @params1 ";
+                                        + "user_login = @params1 ";
         public static string GETVENDORINFO = "SELECT SQL_NO_CACHE "
                                         + "name, "
                                         + "email, "
@@ -59,7 +59,25 @@ namespace OrderyAPI.Utils
                                         + "FROM "
                                         + "@params0, "
                                         + "WHERE "
-                                        + "id = @params1 ";
+                                        + "user_login = @params1 ";
+        public static string GETSTOREINFO = "SELECT SQL_NO_CACHE "
+                                        + "name, "
+                                        + "contact, "
+                                        + "email, "
+                                        + "fb, "
+                                        + "ig, "
+                                        + "tw, "
+                                        + "is_always_open, "
+                                        + "store_opens, "
+                                        + "store_closes, "
+                                        + "longhitude, "
+                                        + "latitude, "
+                                        + "store_closes, "
+                                        + "image_uri "
+                                        + "FROM "
+                                        + "@params0, "
+                                        + "WHERE "
+                                        + "vendor_login = @params1 ";
         public static string GETFOODCATEGORIES = "SELECT SQL_NO_CACHE "
                                         + "name, "
                                         + "description "
