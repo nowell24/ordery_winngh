@@ -59,7 +59,7 @@ namespace OrderyAPI.Utils
                                         + "FROM "
                                         + "@params0, "
                                         + "WHERE "
-                                        + "user_login = @params1 ";
+                                        + "vendor_login = @params1 ";
         public static string GETSTOREINFO = "SELECT SQL_NO_CACHE "
                                         + "name, "
                                         + "contact, "
