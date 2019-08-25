@@ -30,9 +30,53 @@ namespace OrderyAPI.Utils
                                             + "municipality.province = province.id "
                                             + "AND "
                                             + "barangay.municipality = municipality.id ";
-        public static string GETREGIONS = "SELECT id, name FROM region ORDER BY id";
-        public static string GETPROVINCES = "SELECT id, name FROM province WHERE region=@params0 ORDER BY id";
-        public static string GETMUNICIPALITIES = "SELECT id, name FROM municipality WHERE province=@params0 ORDER BY id";
-        public static string GETBARANGAYS = "SELECT id, name FROM barangay WHERE municipality=@params0 ORDER BY id";
+        public static string GETREGIONS = "SELECT SQL_NO_CACHE id, name FROM region ORDER BY id";
+        public static string GETPROVINCES = "SELECT SQL_NO_CACHE id, name FROM province WHERE region=@params0 ORDER BY id";
+        public static string GETMUNICIPALITIES = "SELECT SQL_NO_CACHE id, name FROM municipality WHERE province=@params0 ORDER BY id";
+        public static string GETBARANGAYS = "SELECT SQL_NO_CACHE id, name FROM barangay WHERE municipality=@params0 ORDER BY id";
+        public static string GETUSERINFO = "SELECT SQL_NO_CACHE "
+                                        + "name, "
+                                        + "email, "
+                                        + "contact, "
+                                        + "gender, "
+                                        + "bday, "
+                                        + "address, "
+                                        + "zip, "
+                                        + "image_uri "
+                                        + "FROM "
+                                        + "@params0, "
+                                        + "WHERE "
+                                        + "id = @params1 ";
+        public static string GETVENDORINFO = "SELECT SQL_NO_CACHE "
+                                        + "name, "
+                                        + "email, "
+                                        + "contact, "
+                                        + "gender, "
+                                        + "bday, "
+                                        + "address, "
+                                        + "zip, "
+                                        + "image_uri "
+                                        + "FROM "
+                                        + "@params0, "
+                                        + "WHERE "
+                                        + "id = @params1 ";
+        public static string GETFOODCATEGORIES = "SELECT SQL_NO_CACHE "
+                                        + "name, "
+                                        + "description "
+                                        + "FROM "
+                                        + "@params0, "
+                                        + "WHERE "
+                                        + "store = @params1 ";
+        public static string GETFOODMENU = "SELECT SQL_NO_CACHE "
+                                        + "name, "
+                                        + "description, "
+                                        + "price, "
+                                        + "image_uri "
+                                        + "FROM "
+                                        + "@params0, "
+                                        + "WHERE "
+                                        + "store = @params1 "
+                                        + "AND "
+                                        + "food_category = @params2 ";
     }
 }
