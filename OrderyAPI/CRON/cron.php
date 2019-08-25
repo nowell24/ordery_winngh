@@ -45,6 +45,7 @@ try
         				  sec_q2 INT(10) NOT NULL,
         				  sec_q1_ans VARCHAR(50) NOT NULL,
         				  sec_q2_ans VARCHAR(50) NOT NULL,
+                          image_uri TEXT,
         				  PRIMARY KEY (id),
         				  KEY user_login_id$ctr".date("Y")." (user_login),
         				  CONSTRAINT user_login_id$ctr".date("Y")." FOREIGN KEY (user_login) REFERENCES user_login (id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -71,6 +72,11 @@ try
         				  email VARCHAR(25) NOT NULL,
 						  contact VARCHAR(25) NOT NULL,
         				  gender VARCHAR(25) NOT NULL,
+                          sec_q1 INT(10) NOT NULL,
+                          sec_q2 INT(10) NOT NULL,
+                          sec_q1_ans VARCHAR(50) NOT NULL,
+                          sec_q2_ans VARCHAR(50) NOT NULL,
+                          image_uri TEXT,
         				  PRIMARY KEY (id),
         				  KEY vendor_login_id$ctr".date("Y")." (vendor_login),
         				  CONSTRAINT vendor_login_id$ctr".date("Y")." FOREIGN KEY (vendor_login) REFERENCES vendor_login (id) ON DELETE CASCADE ON UPDATE CASCADE

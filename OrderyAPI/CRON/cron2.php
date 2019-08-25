@@ -72,6 +72,7 @@ try
 				  NAME VARCHAR(100) NOT NULL,
 				  description TEXT DEFAULT NULL,
 				  price DOUBLE,
+				  image_uri TEXT,
 				  PRIMARY KEY (id),
 				  KEY food_category_id".date("Ym")." (food_category),
 				  CONSTRAINT food_category_id".date("Ym")." FOREIGN KEY (food_category) REFERENCES food_category_".date("m_Y") ." (id) ON DELETE CASCADE ON UPDATE CASCADE,
