@@ -1,6 +1,0 @@
-namespace OrderyAPI.Areas.HelpPage.ModelDescriptions
-{
-    public class SimpleTypeModelDescription : ModelDescription
-    {
-    }
-}
