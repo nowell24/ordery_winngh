@@ -261,10 +261,14 @@
     <Compile Include="DAO\DAOAddress.cs" />
     <Compile Include="DAO\DAOAddressSpecs.cs" />
     <Compile Include="DAO\DAOTest.cs" />
+    <Compile Include="DAO\DAOUser.cs" />
     <Compile Include="DTO\DTOAddress.cs" />
     <Compile Include="DTO\DTOAddressSpecs.cs" />
+    <Compile Include="DTO\DTOFoodStore.cs" />
     <Compile Include="DTO\DTOParams.cs" />
     <Compile Include="DTO\DTOTest.cs" />
+    <Compile Include="DTO\DTOUser.cs" />
+    <Compile Include="DTO\DTOVendor.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
