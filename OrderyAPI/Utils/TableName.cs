@@ -18,6 +18,7 @@ namespace OrderyAPI.Utils
             DAOFactory factory = new DAOSeqTbl();
             DTOParams dto = new DTOParams();
             dto.params0 = city;
+            dto.count = 1;
             List<ArrayList> result = factory.read(Constants.GETSEQUENCE, dto);
             table = "user_"+result[0][3].ToString() + "_"+DateTime.Now.Year;
         }
